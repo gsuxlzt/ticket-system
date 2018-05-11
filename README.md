@@ -1,1 +1,1 @@
-Practicing react with redux.
+Practicing react with redux. Minimal styles implemented as the purpose of this project is to familiarize myself with using redux.
