@@ -5,7 +5,8 @@ class AddTicket extends Component {
             btnText: 'Add'
     }
 
-    onTicketSubmit = () => {
+    onTicketSubmit = (e) => {
+        e.preventDefault();
         if (!this.input.value) return;
 
         this.setState({btnText: '...'});
@@ -37,7 +38,7 @@ class AddTicket extends Component {
                 &nbsp;
                 <button 
                     style={{ cursor: "pointer" }} 
-                    onClick={(e)=> {e.preventDefault(); this.onTicketSubmit()}}
+                    onClick={e => this.onTicketSubmit(e)}
                     disabled={btnText === '...'}>
                     {btnText}
                 </button>
